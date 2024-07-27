@@ -1,0 +1,596 @@
+
+/* Скидання відступів та вирівнювання для всіх елементів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Стилі для тіла сторінки */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #4B79A1, #283E51);
+}
+ 
+/* Стилі для шапки сайту */
+.header {
+    display: flex; /* Використання flexbox для розташування елементів */
+    justify-content: space-between; /* Простір між логотипом та навігацією */
+    align-items: center; /* Вирівнювання по вертикалі по центру */
+    padding: 20px 40px; /* Відступи навколо шапки */
+    color: #fff; /* Колір тексту */
+    background: linear-gradient(to right, #4B79A1, #283E51); /* Зліва направо */
+
+
+}
+
+/* Стилі для логотипу */
+.logo {
+    font-size: 1.5rem; /* Розмір шрифту */
+    font-weight: bold; /* Жирний шрифт */
+}
+
+/* Стилі для меню навігації */
+/* Основні стилі для навігації */
+.nav {
+    display: flex; /* Використання flexbox для розташування елементів */
+}
+
+/* Стилі для списку меню навігації */
+.nav-list {
+    display: flex; /* Використання flexbox для розташування елементів */
+    list-style: none; /* Відсутність маркерів списку */
+}
+
+/* Стилі для елементів списку */
+.nav-item {
+    margin-left: 20px; /* Відступ між пунктами меню */
+}
+
+/* Стилі для посилань у меню */
+.nav-link {
+    position: relative; /* Необхідно для використання псевдоелементів */
+    text-decoration: none; /* Відсутність підкреслення */
+    color: #fff; /* Колір тексту */
+    font-size: 1rem; /* Розмір шрифту */
+    transition: color 0.3s ease-in-out; /* Плавна зміна кольору при наведенні */
+}
+
+/* Стилі для псевдоелемента, що створює підкреслення */
+.nav-link::after {
+    content: ''; /* Пустий контент */
+    position: absolute; /* Абсолютне позиціювання */
+    left: 0;
+    bottom: -5px; /* Відступ від тексту до лінії */
+    width: 0; /* Початковий розмір по ширині */
+    height: 2px; /* Висота лінії */
+    background-color: orange; /* Колір лінії */
+    transition: width 0.3s ease-in-out; /* Анімація зміни ширини */
+}
+
+/* Анімація при наведенні */
+.nav-link:hover::after {
+    width: 100%; /* Лінія розширюється до повної ширини посилання */
+}
+
+/* Стилі для посилань при наведенні */
+.nav-link:hover {
+    color: orange; /* Зміна кольору тексту при наведенні */
+}
+
+/* Контейнер для зображення та тексту */
+.hello {
+    display: flex; /* Використання Flexbox для розташування елементів */
+    align-items: center; /* Вирівнювання по вертикалі по центру */
+    padding: 20px; /* Відступи навколо контейнера */
+    backgroundcolor: #fff; /* Фоновий колір для контейнера */
+    border-radius: 15px; /* Закруглення кутів контейнера */
+    
+
+}
+
+.hello img {
+    width: 500px;
+    height: 500px;
+    border-radius: 360px; /* Менше закруглення для зображення */
+    border: 2px solid #333; /* Додавання товщини та стилю до обрамлення */
+    margin-left: 250px; /* Відступ між текстом та зображенням */
+    margin-right: 40px;
+}
+
+.hello-text {
+    max-width: 400px; /* Максимальна ширина текстового блоку */
+    padding: 20px; /* Внутрішні відступи навколо тексту */
+    background-color: #fafafa; /* Легкий фоновий колір для текстового блоку */
+    border-radius: 10px; /* Закруглення кутів текстового блоку */
+    font-size: 1.2rem; /* Розмір шрифту */
+    line-height: 1.8; /* Інтерліньяж для покращення читабельності */
+    text-align: justify; /* Вирівнювання тексту по ширині */
+     font-family: "Open Sans", sans-serif;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Тінь для текстового блоку */
+    margin-right: 40px; /* Відступ справа для тексту */
+}
+
+/* Стилі для заголовків всередині текстового блоку */
+.hello-text h2 {
+    color: black; /* Колір заголовку */
+    margin-top: 0; /* Відступ зверху заголовку, щоб не було зайвого простору */
+    margin-bottom: 15px; /* Відступ знизу заголовку для відокремлення від наступного контенту */
+}
+
+/* Стилі для абзаців всередині текстового блоку */
+.hello-text p {
+    margin: 0 0 15px; /* Відступи для абзаців: знизу для відокремлення від наступного абзацу */
+    color: black;
+}
+.hello-text  {
+    color: black;
+}
+/* Стилі для списків всередині текстового блоку */
+.hello-text ul {
+    padding-left: 20px; /* Відступ для маркерів списку */
+}
+
+.hello-text ul li {
+    margin-bottom: 10px; /* Відступ знизу для кожного елемента списку */
+}
+
+/* Стилі для посилань всередині текстового блоку */
+.hello-text a {
+    color: black; /* Колір посилань */
+    text-decoration: none; /* Відсутність підкреслення */
+    transition: color 0.3s; /* Плавна зміна кольору при наведенні */
+}
+
+.hello-text a:hover {
+    color: #d63d2e; /* Колір посилання при наведенні */
+}
+
+/* Основні стилі для секції */
+.mh-home {
+    position: relative; /* Встановлює позицію як відносну для використання позиціювання елементів всередині */
+    background #f4f4f4; /* Легкий фоновий колір для секції */
+    padding: 50px 0; /* Відступи зверху і знизу секції */
+}
+
+/* Стилі для контейнера */
+.container {
+    max-width: 1200px; /* Максимальна ширина контейнера */
+    margin: 0 auto; /* Центрування контейнера по горизонталі */
+    padding: 0 15px; /* Внутрішні відступи по боках контейнера */
+}
+
+/* Стилі для ряду */
+.row {
+    display: flex; /* Використання Flexbox для розташування елементів в рядок */
+    flex-wrap: wrap; /* Дозволяє елементам переноситися на новий рядок при необхідності */
+    align-items: center; /* Вирівнювання елементів по вертикалі по центру */
+}
+
+/* Вирівнювання вертикального середнього контенту */
+.vertical-middle-content {
+    display: flex; /* Використання Flexbox для вирівнювання елементів */
+    align-items: center; /* Вирівнювання елементів по вертикалі по центру */
+}
+
+/* Відступи для секцій */
+.section-separator {
+    margin-bottom: 50px; /* Відступ знизу секції */
+}
+
+/* Відступи для домашньої сторінки */
+.home-padding {
+    padding: 100px 0; /* Відступи зверху і знизу для розділу */
+}
+
+/* Інформація заголовку */
+.mh-header-info {
+    padding: 20px; /* Внутрішні відступи для контейнера заголовку */
+    color: white;
+}
+
+/* Стиль для промо */
+.mh-promo span {
+    display: inline-block; /* Відображення як блочний елемент для додавання стилів */
+    background: skyblue; /* Фоновий колір для промо тексту */
+    color: white; /* Колір тексту промо */
+    padding: 5px 10px; /* Внутрішні відступи для промо тексту */
+    border-radius: 5px; /* Закруглення кутів промо тексту */
+    font-size: 20px;
+}
+.mh-header-info h2, h3 {
+    font-size: 50px;
+    margin: 0;
+}
+
+/* Заголовки */
+h2, h4 {
+    margin: 10px 0; /* Відступи зверху і знизу заголовків */
+    color: white; /* Колір тексту заголовків */
+
+}
+
+/* Список контактів */
+ul {
+    list-style: none; /* Відсутність маркерів списку */
+    padding: 0; /* Відсутність внутрішніх відступів */
+}
+
+ul li {
+    margin-bottom: 10px; /* Відступ знизу для кожного елемента списку */
+}
+
+ul li a {
+    color: white; /* Колір тексту посилання */
+    text-decoration: none; /* Відсутність підкреслення у посилання */
+}
+
+ul li i {
+    margin-right: 10px; /* Відступ справа для іконок */
+}
+
+/* Соціальні іконки */
+.social-icon {
+    display: flex; /* Використання Flexbox для розташування соціальних іконок в рядок */
+    gap: 15px; /* Пробіл між іконками */
+}
+
+.social-icon li a {
+    color: white; /* Колір соціальних іконок */
+    font-size: 1.5rem; /* Розмір шрифту для іконок */
+    transition: color 0.3s; /* Плавна зміна кольору при наведенні */
+}
+
+.social-icon li a:hover {
+    color: black; /* Колір іконок при наведенні */
+}
+
+/* Анімація для WOW.js */
+.wow {
+    visibility: hidden; /* Ховає елементи, поки вони не стануть видимими */
+}
+
+.animated {
+    animation-duration: 0.8s; /* Тривалість анімації */
+    animation-fill-mode: both; /* Збереження кінцевого стану анімації після її завершення */
+}
+
+/* Додаткові ефекти для анімації */
+.fadeInUp {
+    animation-name: fadeInUp; /* Назва анімації */
+}
+
+/* Ключові кадри для анімації появи знизу вгору */
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Початковий стан - повна прозорість */
+        transform: translate3d(0, 40px, 0); /* Початкова позиція - знизу */
+    }
+    to {
+        opacity: 1; /* Кінцевий стан - повна видимість */
+        transform: translate3d(0, 0, 0); /* Кінцева позиція - на місці */
+    }
+}
+
+/* Стилі для зображення героя */
+.hero-img {
+    text-align: center; /* Вирівнювання зображення по центру */
+    margin-left: 300px;
+}
+
+.img-border {
+    border: 15px solid white; /* Обрамлення зображення */
+    border-radius: 100%; /* Закруглення кутів до кола */
+    padding: 15px; /* Внутрішні відступи для обрамлення */
+}
+
+.img-fluid {
+    max-width: 400px; /* Максимальна ширина зображення - 100% від контейнера */
+    height: auto; /* Автоматичне встановлення висоти для збереження пропорцій */
+    border-radius: 100%; /* Закруглення кутів до кола */
+}
+/*Grafik*/
+.mh-skills {
+    padding: 50px 0;
+}
+.section-title {
+    margin-bottom: 30px;
+}
+.mh-skills-inner {
+    margin-top: 20px;
+}
+.each-skills {
+    margin-bottom: 20px;
+}
+.candidatos {
+    margin-bottom: 10px;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+.progressBar {
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    margin-top: 5px;
+}
+.percentagem {
+    background: #007bff;
+    height: 100%;
+    transition: width 1s;
+}
+.mh-professional-skills {
+    margin-top: 20px;
+}
+.mh-professional-progress {
+    list-style: none;
+    padding: 0;
+}
+.mh-progress {
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+.mh-progress-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#007bff calc(var(--progress) * 1%), #e0e0e0 0%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.pr-skill-name {
+    margin-top: 10px;
+    font-size: 16px;
+}
+/* Загальні стилі для секції */
+.mh-skills {
+    padding: 40px 0;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Стилі для секції з навичками */
+.mh-skills-inner {
+    padding: 20px;
+}
+
+.mh-professional-skill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.each-skills {
+    margin-top: 20px;
+}
+
+.candidatos {
+    margin-bottom: 15px;
+}
+
+.parcial {
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.nome {
+    font-weight: bold;
+}
+
+.percentagem-num {
+    font-size: 1rem;
+}
+
+.progressBar {
+    flex: 2;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.percentagem {
+    background-color: #fff; /* Білий колір для прогрес-барів */
+    height: 100%;
+    transition: width 0.8s ease;
+}
+
+/* Стилі для секції "Про компанію" */
+.mh-professional-skills h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.mh-professional-progress {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mh-professional-progress li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.mh-progress-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    border: 5px solid #fff; /* Білий обідок для прогрес-барів */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.mh-progress-circle::after {
+    content: attr(data-progress) '%';
+    position: absolute;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Стилі для мобільних пристроїв */
+@media (max-width: 767px) {
+    .mh-skills-inner,
+    .mh-professional-skills {
+        padding: 10px;
+    }
+
+    .mh-professional-progress li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mh-progress-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .percentagem-num {
+        font-size: 0.9rem;
+    }
+}
+/* Загальний стиль для секції відгуків */
+.testimonials {
+    padding: 50px 0;
+   
+}
+
+.testimonials .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.testimonial-item {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial-item p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.testimonial-item h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.slick-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #333;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #007bff;
+}
+
+.slick-prev, .slick-next {
+    font-size: 24px;
+    color: #007bff;
+    background: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background-color: #e6f0ff;
+}
+/* Основний контейнер секції */
+.anket-1 {
+    padding: 40px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mh-work-item {
+    max-width: 700px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+   
+}
+
+.anket h2 {
+    font-size: 2rem;
+    color: white; /* Темно-сірий колір тексту */
+    margin-bottom: 10px;
+}
+
+.anket p {
+    font-size: 1.1rem;
+    color: white; /* Сірий колір для тексту */
+    margin-bottom: 20px;
+}
+
+.oval-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: black; /* Білий текст */
+    background-color: yellow; /* Основний колір кнопки */
+    border-radius: 50px; /* Овальне оформлення кнопки */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+
+}
+
+.oval-button:hover {
+    color: white;
+    background-color: black; /* Темніший відтінок для ефекту наведення */
+    transform: scale(1.05); /* Легке збільшення при наведенні */
+}
